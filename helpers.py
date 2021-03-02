@@ -24,3 +24,25 @@ def checkWrongAnswer(answer):
     except:
         res = promptWrongAnswer()
         return checkWrongAnswer(res)
+
+
+def isSameCity(origin, target):
+    """ Verificar si las respuestas son iguales
+    Args:
+        origin: integer indicando el índice de la ciudad de origen
+        target: integer indicando el índice de la ciudad de destino
+    Returns:
+        True si origin == target, False si lo contrario
+    """
+    return True if origin == target else False
+
+
+def hasVisa(res):
+    """ Conocer si la persona tiene o no VISA
+    Args:
+        res: string 'y' ó 'n'
+    Returns:
+        boolean indicando la respuesta
+    """
+    res = res.lower()
+    return True if res == 's' else False
