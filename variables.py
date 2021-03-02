@@ -61,6 +61,6 @@ msgs = {
     'msg1': 'Bienvenido a la agencia de viajes Metro Travel',
     'msg2': 'Seleccione la ciudad de origen de su vuelo',
     'msg3': 'Seleccione la ciudad destino de su vuelo',
-    'msg4': 'Cuenta usted con VISA?',
+    'msg4': 'Cuenta usted con VISA? (S/N)',
     'msg5': 'Qué tipo de ruta desea escoger?'
 }
