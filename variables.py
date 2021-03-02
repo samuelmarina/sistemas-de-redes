@@ -62,5 +62,5 @@ msgs = {
     'msg2': 'Seleccione la ciudad de origen de su vuelo',
     'msg3': 'Seleccione la ciudad destino de su vuelo',
     'msg4': 'Cuenta usted con VISA? (S/N)',
-    'msg5': 'Qué tipo de ruta desea escoger?'
+    'msg5': 'Qué tipo de ruta desea escoger?\n1 - La más corta\n2 - La más barata'
 }

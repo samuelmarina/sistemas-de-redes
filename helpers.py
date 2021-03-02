@@ -8,22 +8,24 @@ def promptWrongAnswer():
     return answer
 
 
-def checkWrongAnswer(answer):
+def checkWrongAnswer(answer, start, stop):
     """ Validar respuesta correcta
     Args:
-        answer: respuesta del input
+        answer: string respuesta del input
+        start: integer indicando el mínimo valor de la respuesta
+        stop: integer indicando el máximo valor de la respuesta
     Returns:
         integer indicando el índice de la ciudad
     """
     try:
         answer = int(answer)
-        while answer < 0 or answer > 10:
+        while answer < start or answer > stop:
             res = promptWrongAnswer()
             answer = int(res)
         return answer
     except:
         res = promptWrongAnswer()
-        return checkWrongAnswer(res)
+        return checkWrongAnswer(res, start, stop)
 
 
 def isSameCity(origin, target):
