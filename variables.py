@@ -55,3 +55,12 @@ cityName = {
     'FDF': 'Fort de France (Martinica)',
     'PTP': 'Point a Pitre (Guadalupe)'
 }
+
+# Diccionario de mensajes
+msgs = {
+    'msg1': 'Bienvenido a la agencia de viajes Metro Travel',
+    'msg2': 'Seleccione la ciudad de origen de su vuelo',
+    'msg3': 'Seleccione la ciudad destino de su vuelo',
+    'msg4': 'Cuenta usted con VISA?',
+    'msg5': 'Qué tipo de ruta desea escoger?'
+}
