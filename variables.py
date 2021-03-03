@@ -1,4 +1,5 @@
 import math
+from adjacencyList import AdjList
 
 # Arreglo de ciudades
 cities = ['CCS', 'AUA', 'BON', 'CUR', 'SXM',
@@ -25,6 +26,9 @@ flights = [
     [math.inf, math.inf, math.inf, math.inf, 100,
         math.inf, 80, 80, math.inf, math.inf, 0]
 ]
+
+# Lista de Adyacencia
+adjList = AdjList(cities).adj
 
 # Diccionario de Visas
 visas = {
