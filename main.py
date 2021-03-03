@@ -1,5 +1,6 @@
-from variables import cities, flights, visas, cityName, msgs as M
+from variables import cities, flights, visas, cityName, msgs as M, adjList
 from helpers import checkWrongAnswer, hasVisa
+from BFS import getShortestDistance
 
 
 def printCities():
