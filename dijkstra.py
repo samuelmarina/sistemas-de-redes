@@ -100,7 +100,7 @@ def dijkstra(flights, source, target, vertices, flag, pred):
   
     return(distance) 
   
-def getShortestDijkstra(flights, source, target, vertices, visa):
+def getShortestDijkstra(source, target, vertices, visa):
     """ Construir la distancia mas corta (por peso de las aristas)
     entre dos nodos
     Args:
@@ -127,5 +127,3 @@ def getShortestDijkstra(flights, source, target, vertices, visa):
     path.reverse()
     printResult(visitedSet, source, target, path)
 
-
-getShortestDijkstra(flights, 1, 6, 11, False)

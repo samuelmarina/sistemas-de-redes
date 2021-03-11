@@ -1,6 +1,7 @@
 from variables import cities, flights, visas, cityName, msgs as M, adjList
 from helpers import checkWrongAnswer, hasVisa
 from BFS import getShortestDistance
+from dijkstra import getShortestDijkstra
 
 
 def printCities():
@@ -40,8 +41,9 @@ def start():
     response = requestInput()
     if response.get('route') == 1:
         getShortestDistance(adjList, response.get('origin'), response.get('target'), 11, response.get('visa'))
-    else:
-        
+    if response.get('route') == 2:
+        getShortestDijkstra(response.get('origin'), response.get('target'), 11, response.get('visa'))
+    
 
 
 start()
