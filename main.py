@@ -38,6 +38,10 @@ def requestInput():
 def start():
     printWelcomeMessage()
     response = requestInput()
+    if response.get('route') == 1:
+        getShortestDistance(adjList, response.get('origin'), response.get('target'), 11, response.get('visa'))
+    else:
+        
 
 
 start()

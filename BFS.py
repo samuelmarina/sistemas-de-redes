@@ -2,7 +2,7 @@ from variables import cities, visas, flights
 
 
 def BFS(adj, source, target, vertices, pred, flag):
-    """ Algoritmo Breadth-First para conseguir si existe un camnino entre
+    """ Algoritmo Breadth-First para conseguir si existe un camino entre
     dos nodos
     Args:
         adj: lista de adyacencia
