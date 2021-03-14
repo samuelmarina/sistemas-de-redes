@@ -1,5 +1,5 @@
 from variables import cities, flights, visas, cityName, msgs as M, adjList
-from helpers import checkWrongAnswer, hasVisa
+from helpers import checkWrongAnswer, hasVisa, checkWrongAnswer2
 from BFS import getShortestDistance
 from dijkstra import getShortestDijkstra
 
@@ -26,9 +26,9 @@ def requestInput():
     """
     L = len(cities)
     origin = input()
-    origin = checkWrongAnswer(origin, 0, L)
+    origin = checkWrongAnswer2(origin)
     target = input(M['msg3'] + '\n')
-    target = checkWrongAnswer(target, 0, L)
+    target = checkWrongAnswer2(target)
     visa_res = input(M['msg4'] + '\n')
     visa = hasVisa(visa_res)
     route = input(M['msg5'] + '\n')

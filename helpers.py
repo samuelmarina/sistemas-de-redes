@@ -1,15 +1,18 @@
-def promptWrongAnswer():
+from variables import cities
+
+
+def promptWrongAnswer(msg):
     """ Pedir al usuario que reingrese su respuesta
     Returns:
         string obtenido del input
     """
-    print('Respuesta inválida, por favor escoja un número de la lista')
+    print(msg)
     answer = input()
     return answer
 
 
 def checkWrongAnswer(answer, start, stop):
-    """ Validar respuesta correcta
+    """ Validar respuesta correcta de selección de lista
     Args:
         answer: string respuesta del input
         start: integer indicando el mínimo valor de la respuesta
@@ -20,12 +23,36 @@ def checkWrongAnswer(answer, start, stop):
     try:
         answer = int(answer)
         while answer < start or answer > stop:
-            res = promptWrongAnswer()
+            res = promptWrongAnswer(
+                'Respuesta inválida, por favor escoja un número de la lista')
             answer = int(res)
         return answer
     except:
-        res = promptWrongAnswer()
+        res = promptWrongAnswer(
+            'Respuesta inválida, por favor escoja un número de la lista')
         return checkWrongAnswer(res, start, stop)
+
+
+def checkWrongAnswer2(answer):
+    """ Validar respuesta correcta de selección de una ciudad
+    Args:
+        answer: string respuesta del input
+    Returns:
+        integer indicando el índice de la ciudad
+    """
+    if answer.upper() not in cities:
+        res = promptWrongAnswer(
+            'Respuesta inválida, por favor escriba una ciudad válida')
+        return checkWrongAnswer2(res)
+    return getCityIndex(answer.upper())
+
+
+def getCityIndex(city):
+    """ Conseguir el índice de la ciudad en el arreglo
+    Returns:
+        integer indicando el índice de la ciudad
+    """
+    return cities.index(city)
 
 
 def isSameCity(origin, target):
