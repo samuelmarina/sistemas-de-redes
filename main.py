@@ -39,11 +39,14 @@ def requestInput():
 def start():
     printWelcomeMessage()
     response = requestInput()
-    if response.get('route') == 1:
-        getShortestDistance(adjList, response.get('origin'), response.get('target'), 11, response.get('visa'))
-    if response.get('route') == 2:
-        getShortestDijkstra(response.get('origin'), response.get('target'), 11, response.get('visa'))
-    
+    origin = response['origin']
+    target = response['target']
+    visa = response['visa']
+    route = response['route']
+    if route == 1:
+        getShortestDistance(adjList, origin, target, 11, visa)
+    else:
+        getShortestDijkstra(origin, target, 11, visa)
 
 
 start()
